@@ -135,4 +135,7 @@
   .full-height {
     @apply h-[calc(100vh-72px)];
   }
+
+  .heading {
+  }
 }
