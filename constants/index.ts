@@ -1,22 +1,22 @@
 export const sidebarOptions = [
   {
-    label: "Inicio",
+    label: "Home",
     icon: "GrHomeRounded",
     route: "/",
   },
   {
-    label: "Próximas",
+    label: "Upcoming",
     icon: "FaRegCalendarAlt",
     route: "/upcoming",
   },
   {
-    label: "Historial",
+    label: "Previous",
     icon: "FaRegCalendarCheck",
     route: "/history",
   },
   {
     label: "Grabaciones",
-    icon: "FaVideo",
+    icon: "GoDeviceCameraVideo",
     route: "/recordings",
   },
   {

@@ -10,7 +10,7 @@ const Sidebar = () => {
 
   return (
     <aside className="bg-dark-blue-1 min-w-[264px] full-height  hidden md:block">
-      <div className="mt-8 px-4 flex flex-col gap-3 text-white-1">
+      <div className="mt-8 px-3 flex flex-col gap-[14px] text-white-1">
         {sidebarOptions.map(({ icon, label, route }) => (
           <SidebarOption
             isActive={path == route}

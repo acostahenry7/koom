@@ -24,7 +24,7 @@ const MobileSidebar = ({ side = "left", classNames }: MobileSidebarProps) => {
   return (
     <Sheet>
       <SheetTrigger className="sm:hidden">
-        <FaBars size={24} className="text-white" />
+        <FaBars size={26} className="text-white-1" />
       </SheetTrigger>
 
       <SheetContent className="bg-dark-blue-1 py-4 px-6" side={side}>
@@ -38,7 +38,7 @@ const MobileSidebar = ({ side = "left", classNames }: MobileSidebarProps) => {
           />
           <span className="text-2xl font-extrabold text-white ">Koom</span>
         </div>
-        <div className="mt-8 px-4 flex flex-col gap-3 text-white-1">
+        <div className="mt-8  flex flex-col gap-3 text-white-1">
           {sidebarOptions.map(({ icon, label, route }) => (
             <SidebarOption
               isActive={path == route}

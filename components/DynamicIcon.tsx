@@ -1,28 +1,32 @@
 import * as FaIcons from "react-icons/fa";
 import * as MdIcons from "react-icons/md";
 import * as GrIcons from "react-icons/gr";
+import * as GoIcons from "react-icons/go";
 
 const iconPacks = {
   fa: FaIcons,
   md: MdIcons,
   gr: GrIcons,
+  go: GoIcons,
 };
 
 interface DynamicIconProps {
-  pack?: "fa" | "md" | "gr";
+  pack?: "fa" | "md" | "gr" | "go";
   name: string;
   size?: number;
   color?: string;
   className?: string;
 }
 const DynamicIcon = ({
-  pack = "fa",
+  pack,
   name,
   size = 16,
   color = "",
   className,
 }: DynamicIconProps) => {
-  const iconSet = iconPacks[pack];
+  const actualPack = pack || name?.slice(0, 2).toLowerCase();
+
+  const iconSet = iconPacks[actualPack];
   const Icon = iconSet?.[name];
 
   if (!Icon) {

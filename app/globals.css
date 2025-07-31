@@ -11,6 +11,9 @@
   --color-white: #f5fcff;
   --color-white-1: #c9ddff;
   --color-blue-1: #0e78f9;
+  --color-orange: #ff742e;
+  --color-purple: #830ef9;
+  --color-yellow: #f9a90e;
 
   /*Custom classes*/
 
@@ -137,5 +140,40 @@
   }
 
   .heading {
+    @apply text-3xl font-bold text-[#FFFFFF];
+  }
+
+  .glass-box {
+    @apply bg-[#ECF0FF]/10  w-fit  rounded-sm;
+  }
+}
+
+/* === Overriding clerk classes */
+
+.cl-button {
+  color: #c5d0e6 !important;
+}
+
+.cl-socialButtonsBlockButton {
+  border: 3px solid #252a41 !important;
+}
+
+.cl-formFieldInput::placeholder {
+  color: #363e61 !important;
+}
+
+.cl-providerIcon__github {
+  filter: invert(1) !important;
+}
+
+.cl-avatarBox {
+  width: 36px !important;
+  height: 36px !important;
+}
+
+@media screen and (max-width: 768px) {
+  .cl-avatarBox {
+    width: 30px !important;
+    height: 30px !important;
   }
 }
