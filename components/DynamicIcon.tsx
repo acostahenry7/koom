@@ -26,6 +26,7 @@ const DynamicIcon = ({
 }: DynamicIconProps) => {
   const actualPack = pack || name?.slice(0, 2).toLowerCase();
 
+  //@ts-ignore
   const iconSet = iconPacks[actualPack];
   const Icon = iconSet?.[name];
 

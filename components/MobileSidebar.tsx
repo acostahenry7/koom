@@ -28,6 +28,7 @@ const MobileSidebar = ({ side = "left", classNames }: MobileSidebarProps) => {
       </SheetTrigger>
 
       <SheetContent className="bg-dark-blue-1 py-4 px-6" side={side}>
+        <SheetTitle></SheetTitle>
         <div className="flex items-center gap-0.5">
           <Image
             src="/icons/logo.svg"

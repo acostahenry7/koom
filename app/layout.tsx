@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import "@stream-io/video-react-sdk/dist/css/styles.css";
 import { ClerkProvider } from "@clerk/nextjs";
+import { Toaster } from "@/components/ui/sonner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,10 +27,25 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <ClerkProvider>
+      <ClerkProvider
+        appearance={{
+          variables: {
+            colorBackground: "#1c1f2e",
+            colorInput: "#252A41",
+            colorPrimary: "#0e78f9",
+            colorInputForeground: "white",
+            colorForeground: "white",
+          },
+        }}
+      >
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased bg-dark-blue`}
         >
+          <Toaster
+            className="bg-dark-blue-1!"
+            richColors
+            position="top-right"
+          />
           {children}
         </body>
       </ClerkProvider>
